@@ -18,9 +18,3 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-function assertCssStyle(element, styleProperty, expectedValue) {
-    cy.get(element).should('have.css', styleProperty).and(actualValue => {
-        expect(actualValue).to.equal(expectedValue);
-    });
-}
