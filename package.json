@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "pnpm": "^8.6.12"
+  },
+  "scripts": {
+    "start": "cypress open"
+  }
+}
