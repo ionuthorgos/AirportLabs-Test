@@ -12,7 +12,7 @@ describe('template spec', () => {
     // cy.get('[aria-label="Inchide"]').click()
     // Add accesory based on manufacturer and to have minimum 3 stars
   })
- 
+
 })
 
 // Application under test: use any shopping site

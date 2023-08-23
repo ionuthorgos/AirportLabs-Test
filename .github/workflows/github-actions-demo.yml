@@ -16,4 +16,5 @@ jobs:
         with:
           build: yarn
           start: yarn run start
+          browser: chrome
 
