@@ -11,9 +11,9 @@ jobs:
         with:
           node-version: '16'
           
-      - name: Installing dependencies
-        run: 
- 
-      - name: Start running automated tests
-        run: 
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          build: yarn
+          start: yarn run start
 
