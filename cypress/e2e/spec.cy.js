@@ -3,16 +3,20 @@ import GenericFunctions from '../utils/genericFunctions';
 describe('template spec', () => {
   it('Scenario 1', () => {
     cy.visit('https://airportlabs.com/')
-    // Validate Software as a Service solution section
+    // Validate Title Software as a Service solution section
     GenericFunctions.validateElementContainsText('[class="w-layout-grid homepage-feature-1"] h2', "text", 'Software as a Service solution incorporating latest cloud based technologies')
+    // Validate font-size for the title
     GenericFunctions.assertTypeCssStyle('[class="w-layout-grid homepage-feature-1"] h2', 'font-size', '40px')
+    // Validate color for the title
     GenericFunctions.assertTypeCssStyle('[class="w-layout-grid homepage-feature-1"] h2', 'color', 'rgb(255, 255, 255)')
   })
   it('Scenario 2', () => {
     cy.visit('https://airportlabs.com/')
-    // Validate Activity in numbers section from the landing page 200k
+    // Validate Section Activity in numbers section content
     GenericFunctions.validateElementContainsText('[class="h2 green"]:eq(0)', 'text', '200k')
+    // Validate Font-Size 
     GenericFunctions.assertTypeCssStyle('[class="h2 green"]:eq(0)', 'font-size', '40px')
+    // Validate Color 
     GenericFunctions.assertTypeCssStyle('[class="h2 green"]:eq(0)', 'color', 'rgb(82, 206, 147)')
   })
   it('Scenario 3', () => {
