@@ -17,4 +17,5 @@ describe('template spec', () => {
     // Add accessory based on manufacturer and with a minimum of 3 stars
     // You need to implement this part of the test scenario
   });
+  
 });
