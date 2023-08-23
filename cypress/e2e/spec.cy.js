@@ -4,7 +4,7 @@ describe('template spec', () => {
   it('Scenario 1', () => {
     cy.visit('https://airportlabs.com/')
     // Validate Software as a Service solution section
-    GenericFunctions.assertTextValue('[class="w-layout-grid homepage-feature-1"] h2', 'Software as a Service solution incorporating latest cloud based technologies')
+    GenericFunctions.validateElementContainsText('[class="w-layout-grid homepage-feature-1"] h2', "text", 'Software as a Service solution incorporating latest cloud based technologies')
     GenericFunctions.assertTypeCssStyle('[class="w-layout-grid homepage-feature-1"] h2', 'font-size', '40px')
     GenericFunctions.assertTypeCssStyle('[class="w-layout-grid homepage-feature-1"] h2', 'color', 'rgb(255, 255, 255)')
   })
@@ -31,7 +31,7 @@ describe('template spec', () => {
     // cy.get('[class="button w-button"]').click()
     // Validate that the submit contact is working properly
     // I suggest that this selector / message to be hidden until the form is succesfully 
-    GenericFunctions.assertTextValue('[aria-label="Contact Form success"]', 'Thanks for getting in contact with us!Our team is currently reviewing the details you have shared and respond to your inquiry promptly.')
+    GenericFunctions.validateElementContainsText('[aria-label="Contact Form success"]',"text", 'Thanks for getting in contact with us!Our team is currently reviewing the details you have shared and respond to your inquiry promptly.')
   })
   it('Scenario 4', () => {
     cy.visit('https://airportlabs.com/')

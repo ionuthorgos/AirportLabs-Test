@@ -1,12 +1,13 @@
-import Collector from '../utils/collector';
 
 class GenericFunctions {
 
-    async assertTextValue(element, expectedValue) {
-        cy.get(element).should('have.text', expectedValue);
-
-    }
-
+    /**
+  * Validates if an element contains the expected text/value using Cypress assertions.
+  *
+  * @param {string} element - CSS selector of the element to validate.
+  * @param {string} type - Type of validation, either 'text' or 'value'.
+  * @param {string} expectedText - The expected text or value.
+  */
     async assertTypeCssStyle(element, type, expectedText) {
         switch (type) {
             case 'text':
@@ -42,7 +43,7 @@ class GenericFunctions {
     async validateElementContainsText(element, type, expectedText) {
         switch (type) {
             case 'text':
-                cy.get(element).should('contain', expectedText);
+                cy.get(element).should('have.text', expectedText);
                 console.log(expectedText)
                 break;
             case 'value':
