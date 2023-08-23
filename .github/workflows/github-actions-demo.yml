@@ -15,5 +15,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           build: yarn
-          run: yarn cypress run --spec 'cypress/e2e/spec.cy.js' --browser chrome
+          run: yarn cypress run --spec 'cypress/e2e/spec.cy.js' 
+          browser: chrome
 
