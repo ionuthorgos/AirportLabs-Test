@@ -10,10 +10,6 @@ class GenericFunctions {
   */
     async assertTypeCssStyle(element, type, expectedText) {
         switch (type) {
-            case 'text':
-                cy.get(element).should('have.text', expectedText);
-                console.log(expectedText)
-                break;
             case 'font-size':
                 cy.get(element).should('have.css', 'font-size', expectedText);
                 break;
@@ -31,7 +27,6 @@ class GenericFunctions {
                     'Wrong type provided. Please only use "text" and "value" as parameters.'
                 );
         }
-
     }
     /**
      * Validates if an element contains the expected text/value using Cypress assertions.
