@@ -1,7 +1,16 @@
 name: learn-github-actions
 
-on: [push]
-
+on: 
+workflow_dispatch:
+    inputs:
+      tag:
+        description: 'The tag of the test or tests which you want to run'
+        required: true
+        default: '@all-tests'
+      browser:
+        description: 'Name of the browser from browser-capabilities-sauce-labs.js'
+        required: true
+        default: 'chrome'
 jobs:
   run-tests:
     runs-on: ubuntu-latest
