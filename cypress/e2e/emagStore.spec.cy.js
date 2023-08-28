@@ -7,8 +7,9 @@ describe('template spec', () => {
     cy.get('[name="query"]').click().type("Televizor");
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
     cy.wait(3000)
+    cy.get('[type="submit"][data-offer-id="102545610"]').should('be.visible');
     // Add to cart the first element TV
-    //  cy.get('[type="submit"][data-offer-id="102545610"]').click();
+    cy.get('[type="submit"][data-offer-id="102545610"]').click();
     
     // // cy.get('[class="modal-header"]').should('be.visible');
     // // cy.get('[aria-label="Inchide"]').click();
