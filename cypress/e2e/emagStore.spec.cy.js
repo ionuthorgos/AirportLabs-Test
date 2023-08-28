@@ -6,7 +6,7 @@ describe('template spec', () => {
     // Do a search after an item
     cy.get('[name="query"]').click().type("Televizor");
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
-
+    cy.wait(3000)
     // Add to cart the first element TV
      cy.get('button[data-offer-id="102545610"]:eq(1)').click();
     
