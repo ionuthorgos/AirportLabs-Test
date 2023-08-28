@@ -1,7 +1,7 @@
 name: learn-github-actions
 
-on: 
-workflow_dispatch:
+on:
+  workflow_dispatch:
     inputs:
       tag:
         description: 'The tag of the test or tests which you want to run'
