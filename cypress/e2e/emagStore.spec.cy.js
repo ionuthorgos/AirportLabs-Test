@@ -9,6 +9,7 @@ describe('template spec', () => {
     cy.wait(3000)
     cy.get('[type="submit"][data-offer-id="102545610"]').should('be.visible');
     cy.get('[class*="js-accept"]').click();
+    cy.get('div[class="searchbox-wrapper searchbox-dropdown-open"]').should('not.be.visible');
 
     // Add to cart the first element TV
     cy.get('[type="submit"][data-offer-id="102545610"]').click();
