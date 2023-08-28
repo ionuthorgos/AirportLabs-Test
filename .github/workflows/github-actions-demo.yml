@@ -8,7 +8,7 @@ on:
         required: true
         default: '@all-tests'
       browser:
-        description: 'Name of the browser from browser-capabilities-sauce-labs.js'
+        description: 'Name of the browser'
         required: true
         default: 'chrome'
 jobs:
