@@ -16,7 +16,6 @@ describe('template spec', () => {
     // Add to cart the first element TV
     cy.get('[type="submit"][data-offer-id="102545610"]').click();
     
-    // // cy.get('[class="modal-header"]').should('be.visible');
+    // cy.get('[class="modal-header"]').should('be.visible');
   });
-  
 });
