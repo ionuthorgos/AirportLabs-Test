@@ -31,7 +31,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           build: yarn
-          run: cypress run --browser ${{ github.event.inputs.browser }}
+          run: yarn cypress run --browser ${{ github.event.inputs.browser }}
  
           
 
