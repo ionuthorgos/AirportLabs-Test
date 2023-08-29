@@ -7,17 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-
-      - name: Clear Cache
-        run: yarn cache clean --force
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
           build: yarn
-          run: yarn run start --browser chrome
+          run: yarn run start
           
 

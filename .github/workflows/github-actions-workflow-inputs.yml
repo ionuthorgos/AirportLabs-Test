@@ -3,14 +3,14 @@ name: Run automation tests with custom arguments
 on:
   workflow_dispatch:
     inputs:
-      tag:
-        description: 'The tag of the test or tests which you want to run'
-        required: true
-        default: '@all-tests'
       browser:
-        description: 'Name of the browser'
+        type: choice
+        description: Name of the browser
         required: true
-        default: 'chrome'
+        options:
+        - chrome
+        - firefox
+        - opera
 
 jobs:
   run-tests:
@@ -28,6 +28,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           build: yarn
-          run: yarn run start --browser chrome
+          run: yarn run start --browser ${{ github.event.inputs.browser }}
           
 
