@@ -25,10 +25,9 @@ jobs:
         run: yarn cache clean --force
 
       - name: Show command
-        run: echo "cypress run --browser ${{github.event.inputs.browser}}"
+        run: echo "yarn cypress run --browser ${{github.event.inputs.browser}}"
 
       - name: Cypress run
-        uses: cypress-io/github-action@v5
         with:
           build: yarn
           run: yarn cypress run --browser ${{ github.event.inputs.browser }}
