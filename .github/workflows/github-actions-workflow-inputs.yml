@@ -28,6 +28,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           build: yarn
-          run: yarn run start --browser ${{ github.event.inputs.browser }}
+          run: cypress run --browser ${{ github.event.inputs.browser }}
           
 
