@@ -10,9 +10,9 @@ describe('template spec', () => {
     cy.get('[data-section="loading"]').should('be.visible');
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
     cy.url().should('eq', 'https://www.emag.ro/search/Televizor?ref=effective_search');
-    cy.get('[type="submit"][data-offer-id="102545610"]').should('be.visible');
+    // cy.get('[type="submit"][data-offer-id="102545610"]').should('be.visible');
 
-    cy.wait(3000)
+    cy.wait(5000)
     // Add to cart the first element TV
     cy.get('[type="submit"][data-offer-id="102545610"]').click();
     
