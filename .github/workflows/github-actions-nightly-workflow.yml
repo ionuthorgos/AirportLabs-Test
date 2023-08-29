@@ -1,0 +1,25 @@
+name: Run automation tests every night 
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Clear Cache
+        run: yarn cache clean --force
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          build: yarn
+          run: yarn run start --browser chrome
+          
+
