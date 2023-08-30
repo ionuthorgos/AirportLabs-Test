@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.overwrite('request', (originalFn, ...options) => {
+    // Set the failOnStatusCode option to false for all requests
+    options[0].failOnStatusCode = false;
+    
+    // Call the original request function with the modified options
+    return originalFn(...options);
+  });
