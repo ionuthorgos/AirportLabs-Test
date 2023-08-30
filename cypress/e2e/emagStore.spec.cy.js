@@ -1,3 +1,5 @@
+import GenericFunctions from "../utils/genericFunctions";
+
 describe('template spec', () => {
   it('Add item and accessory', () => {
     cy.visit('https://www.emag.ro/');
@@ -10,12 +12,15 @@ describe('template spec', () => {
     cy.get('[data-section="loading"]').should('be.visible');
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
     cy.url().should('eq', 'https://www.emag.ro/search/Televizor?ref=effective_search');
+    GenericFunctions.validateElementContainsText('[class="title-phrasing title-phrasing-xl"]','text', '"Televizor"');
+
     // cy.get('[type="submit"][data-offer-id="102545610"]').should('be.visible');
 
     // cy.wait(5000)
     // Add to cart the first element TV
-    // cy.get('[type="submit"][data-offer-id="102545610"]').click();
+    cy.get('[type="submit"][data-offer-id="102545610"]').click();
     
-    // cy.get('[class="modal-header"]').should('be.visible');
   });
 });
+
+// ce spec file

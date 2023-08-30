@@ -33,6 +33,6 @@ jobs:
           build: yarn
           run: yarn start run
           browser: ${{ github.event.inputs.browser }}
- 
+
           
 
