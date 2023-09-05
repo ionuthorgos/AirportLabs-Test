@@ -11,11 +11,11 @@ describe('template spec', () => {
     cy.get('[data-section="loading"]').should('be.visible');
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
     cy.url().should('eq', 'https://www.emag.ro/search/Televizor?ref=effective_search');
-    cy.get('[class="card-v2-content"] button:nth-child(2)').click();
+    // cy.get('[class="card-v2-content"] button:nth-child(2)').click();
 
     
-    // cy.get('[data-zone="thumbnail"]:eq(1)').click();
-    // cy.get('[class="main-product-form"] button:eq(0)').click();
+    cy.get('[data-zone="thumbnail"]:eq(1)').click();
+    cy.get('[class="main-product-form"] button:eq(0)').click();
 
     // cy.contains('Adauga in Cos').click()
     // GenericFunctions.validateElementContainsText('[class="title-phrasing title-phrasing-xl"]','text', '"Televizor"');
