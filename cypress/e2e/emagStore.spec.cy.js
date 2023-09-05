@@ -14,7 +14,7 @@ describe('template spec', () => {
     // cy.get('[class="card-v2-content"] button:nth-child(2)').click();
 
     
-    cy.get('[data-zone="thumbnail"]:eq(1)').click();
+    cy.get('div[class="card-v2-info"] :nth-child(1)').click();
     cy.get('[class="main-product-form"] button:eq(0)').click();
 
     // cy.contains('Adauga in Cos').click()
