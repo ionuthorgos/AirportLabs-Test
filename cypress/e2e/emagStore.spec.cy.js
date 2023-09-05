@@ -11,7 +11,7 @@ describe('template spec', () => {
     cy.get('[data-section="loading"]').should('be.visible');
     cy.get('button[class="btn btn-default searchbox-submit-button"]').click();
     cy.url().should('eq', 'https://www.emag.ro/search/Televizor?ref=effective_search');
-    cy.get('[class="card-v2-content"] button:eq(1)').click();
+    cy.get('[class="card-v2-content"] button:nth-child(2)').click();
 
     
     // cy.get('[data-zone="thumbnail"]:eq(1)').click();
